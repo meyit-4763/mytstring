@@ -137,7 +137,7 @@ async def gen_session(
     except FloodWait as f:
         return await Anony.send_message(
             user_id,
-            f"» Giriş için kod gönderilemedi.\n\nLütfen {f.value veya f.x} saniye bekleyip tekrar deneyin..",
+            f"» Giriş için kod gönderilemedi.\n\nLütfen {f.value or f.x} saniye bekleyip tekrar deneyin..",
             reply_markup=retry_key,
         )
     except (ApiIdInvalid, ApiIdInvalidError, ApiIdInvalid1):
